@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutiques & Contact | Velora Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Velora Fashion Logo" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/f9ecee/1a1a1a?text=VELORA+FASHION';" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html" class="active">Boutiques</a>
+      </nav>
+      <div class="nav-icons">
+        <button class="icon-btn" onclick="openCart()">🛍️ <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Visit Our Flagship Boutiques</h1>
+    <p>Book a private VIP styling consultation or get in touch with our team.</p>
+  </section>
+
+  <section class="section">
+    <div class="grid grid-2">
+      <!-- Contact Form -->
+      <div class="contact-box">
+        <h3>Book an Appointment</h3>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your VIP appointment request has been submitted.');">
+          <input type="text" placeholder="Full Name" class="form-input" required />
+          <input type="email" placeholder="Email Address" class="form-input" required />
+          <select class="form-input">
+            <option>Select Boutique Location</option>
+            <option>Paris Flagship (Rue Saint-Honoré)</option>
+            <option>New York Atelier (5th Avenue)</option>
+            <option>London Studio (Mayfair)</option>
+          </select>
+          <textarea placeholder="Message / Specific Requirements" class="form-input" rows="4"></textarea>
+          <button type="submit" class="btn-primary full-width">Submit Request</button>
+        </form>
+      </div>
+
+      <!-- Locations -->
+      <div class="location-list">
+        <div class="location-card">
+          <h4>Paris Flagship</h4>
+          <p>242 Rue Saint-Honoré, 75001 Paris, France</p>
+          <p>Email: paris@velorafashion.com</p>
+        </div>
+        <div class="location-card">
+          <h4>New York Flagship</h4>
+          <p>740 Madison Avenue, New York, NY 10065</p>
+          <p>Email: ny@velorafashion.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button onclick="closeCart()" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-body">
+      <p class="empty-msg">Your shopping bag is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <button class="btn-primary full-width">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Velora Fashion. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
