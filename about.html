@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story | Velora Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Velora Fashion Logo" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/f9ecee/1a1a1a?text=VELORA+FASHION';" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="about.html" class="active">Our Story</a>
+        <a href="contact.html">Boutiques</a>
+      </nav>
+      <div class="nav-icons">
+        <button class="icon-btn" onclick="openCart()">🛍️ <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Crafting Timeless Elegance</h1>
+    <p>The heritage and philosophy behind Velora Fashion.</p>
+  </section>
+
+  <section class="section story-section">
+    <div class="grid grid-2 align-center">
+      <div>
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="Atelier Craftsmanship" class="responsive-img" />
+      </div>
+      <div class="story-content">
+        <h2>Uncompromised Craftsmanship</h2>
+        <p>Founded on the belief that clothing should be an expression of confidence and poise, Velora Fashion creates timeless womenswear that transcends seasonal trends.</p>
+        <p>Every garment is hand-crafted in our European ateliers using ethically sourced organic silks, fine cashmere, and sustainable wool blend fabrics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button onclick="closeCart()" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-body">
+      <p class="empty-msg">Your shopping bag is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <button class="btn-primary full-width">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Velora Fashion. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
